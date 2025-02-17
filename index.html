@@ -1,250 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./logo.webp" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./logo.webp" type="image/x-icon" />
     <title>Edu Hub - Academy Management System</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <!-- Icons CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-gray-50">
-
+  <body class="bg-gray-50">
     <!-- Navbar -->
     <nav class="bg-white shadow-md p-4">
-        <div class="container mx-auto flex justify-between items-center flex-wrap">
-            <a href="#" class="text-2xl font-bold text-blue-800 flex items-center">
-                <img src="./logo.webp" alt="Edu Hub Logo" class="h-8 rounded-md mr-2"> Edu Hub
-            </a>
-            <div class="space-x-6 hidden md:flex">
-                <a href="#" class="text-gray-700 hover:text-blue-800">Home</a>
-                <a href="#" class="text-gray-700 hover:text-blue-800">Features</a>
-                <a href="#" class="text-gray-700 hover:text-blue-800">Services</a>
-                <a href="#" class="text-gray-700 hover:text-blue-800">About</a>
-                <a href="#" class="text-gray-700 hover:text-blue-800">Contact</a>
-            </div>
-            <div class="flex space-x-4">
-                <a href="./registration.html" class="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-900">Sign Up</a>
-                <a href="./login.html" class="border border-blue-800 text-blue-800 px-4 py-2 rounded hover:bg-blue-900 hover:text-white">Login</a>
-            </div>
-            <div class="md:hidden">
-                <button id="menu-btn" class="text-gray-700 focus:outline-none">
-                    <i class="fas fa-bars fa-lg"></i>
-                </button>
-            </div>
+      <div
+        class="container mx-auto flex justify-between items-center flex-wrap"
+      >
+        <a href="#" class="text-2xl font-bold text-blue-800 flex items-center">
+          <img
+            src="./logo.webp"
+            alt="Edu Hub Logo"
+            class="h-8 rounded-md mr-2"
+          />
+          Edu Hub
+        </a>
+        <div class="space-x-6 hidden md:flex">
+          <a href="#" class="text-gray-700 hover:text-blue-800">Home</a>
+          <a href="#" class="text-gray-700 hover:text-blue-800">Features</a>
+          <a href="#" class="text-gray-700 hover:text-blue-800">Services</a>
+          <a href="#" class="text-gray-700 hover:text-blue-800">About</a>
+          <a href="#" class="text-gray-700 hover:text-blue-800">Contact</a>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white p-4">
-            <a href="#" class="block text-gray-700 hover:text-blue-800 py-2">Home</a>
-            <a href="#" class="block text-gray-700 hover:text-blue-800 py-2">Features</a>
-            <a href="#" class="block text-gray-700 hover:text-blue-800 py-2">Services</a>
-            <a href="#" class="block text-gray-700 hover:text-blue-800 py-2">About</a>
-            <a href="#" class="block text-gray-700 hover:text-blue-800 py-2">Contact</a>
+        <div class="flex space-x-4">
+          <a
+            href="./registration.html"
+            class="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-900"
+            >Sign Up</a
+          >
+          <a
+            href="./login.html"
+            class="border border-blue-800 text-blue-800 px-4 py-2 rounded hover:bg-blue-900 hover:text-white"
+            >Login</a
+          >
         </div>
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars fa-lg"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white p-4">
+        <a href="#" class="block text-gray-700 hover:text-blue-800 py-2"
+          >Home</a
+        >
+        <a href="#" class="block text-gray-700 hover:text-blue-800 py-2"
+          >Features</a
+        >
+        <a href="#" class="block text-gray-700 hover:text-blue-800 py-2"
+          >Services</a
+        >
+        <a href="#" class="block text-gray-700 hover:text-blue-800 py-2"
+          >About</a
+        >
+        <a href="#" class="block text-gray-700 hover:text-blue-800 py-2"
+          >Contact</a
+        >
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="bg-blue-50 py-28">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-            <!-- Left Side: Name & Tagline -->
-            <div class="text-center md:text-left">
-                <h1 class="text-5xl font-bold text-blue-800 mb-4">Edu Hub</h1>
-                <p class="text-lg sm:text-2xl font-semibold text-gray-700 mb-6">"Transforming Education Management for the Digital Age"</p>
-                <p class="text-lg text-gray-600 mb-6">
-                    Manage your academy's operations, schedule classes, track student progress, and automate fee management—all in one place.
-                </p>
-                <div class="space-x-4">
-                    <button class="bg-blue-800 text-white px-6 py-3 rounded-lg hover:bg-blue-900">Learn More</button>
-                    <button class="bg-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-400">Get Started</button>
-                </div>
-            </div>
-            <!-- Right Side: Hero Image -->
-            <div class="flex justify-center">
-                <img src="https://beneflare.com/Content/Upload/School-Management-System.png" alt="Academy Management" class="w-full h-auto max-w-xs md:max-w-md">
-            </div>
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8"
+      >
+        <!-- Left Side: Name & Tagline -->
+        <div class="text-center md:text-left">
+          <h1 class="text-5xl font-bold text-blue-800 mb-4">Edu Hub</h1>
+          <p class="text-lg sm:text-2xl font-semibold text-gray-700 mb-6">
+            "Transforming Education Management for the Digital Age"
+          </p>
+          <p class="text-lg text-gray-600 mb-6">
+            Manage your academy's operations, schedule classes, track student
+            progress, and automate fee management—all in one place.
+          </p>
+          <div class="space-x-4">
+            <button
+              class="bg-blue-800 text-white px-6 py-3 rounded-lg hover:bg-blue-900"
+            >
+              Learn More
+            </button>
+            <button
+              class="bg-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-400"
+            >
+              Get Started
+            </button>
+          </div>
         </div>
+        <!-- Right Side: Hero Image -->
+        <div class="flex justify-center">
+          <img
+            src="https://beneflare.com/Content/Upload/School-Management-System.png"
+            alt="Academy Management"
+            class="w-full h-auto max-w-xs md:max-w-md"
+          />
+        </div>
+      </div>
     </section>
 
-<!-- Features Section -->
-<section class="py-12 bg-gray-100">
-  <div class="container px-3 mx-auto text-center">
-      <h2 class="text-3xl font-semibold text-gray-800 mb-8">Features of Edu Hub</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-              <i class="fas fa-user-graduate text-4xl text-blue-600 mb-4"></i>
-              <h3 class="text-xl font-medium mb-4 text-gray-700">Student Management</h3>
-              <p>Effortlessly manage student data, monitor their progress, and generate detailed reports.</p>
+    <!-- Features Section -->
+    <section class="py-12 bg-gray-100">
+      <div class="container px-3 mx-auto text-center">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-8">
+          Features of Edu Hub
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
+          >
+            <i class="fas fa-user-graduate text-4xl text-blue-600 mb-4"></i>
+            <h3 class="text-xl font-medium mb-4 text-gray-700">
+              Student Management
+            </h3>
+            <p>
+              Effortlessly manage student data, monitor their progress, and
+              generate detailed reports.
+            </p>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-              <i class="fas fa-calendar-alt text-4xl text-blue-600 mb-4"></i>
-              <h3 class="text-xl font-medium mb-4 text-gray-700">Class Scheduling</h3>
-              <p>Organize classes, schedule sessions, and notify students of upcoming events.</p>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
+          >
+            <i class="fas fa-layer-group text-4xl text-indigo-600 mb-4"></i>
+            <h3 class="text-xl font-medium mb-4 text-gray-700">
+              Batch Management
+            </h3>
+            <p>
+              Organize students into batches for better course structuring and
+              planning.
+            </p>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-              <i class="fas fa-money-check-alt text-4xl text-blue-600 mb-4"></i>
-              <h3 class="text-xl font-medium mb-4 text-gray-700">Fee Management</h3>
-              <p>Keep track of student payments, invoices, and financial records in one place.</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-              <i class="fas fa-chalkboard-teacher text-4xl text-blue-600 mb-4"></i>
-              <h3 class="text-xl font-medium mb-4 text-gray-700">Teacher Management</h3>
-              <p>Manage teacher profiles, schedules, and performance evaluations efficiently.</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-              <i class="fas fa-chart-line text-4xl text-blue-600 mb-4"></i>
-              <h3 class="text-xl font-medium mb-4 text-gray-700">Performance Analytics</h3>
-              <p>Analyze student performance data to make informed decisions for improvement.</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-              <i class="fas fa-file-alt text-4xl text-blue-600 mb-4"></i>
-              <h3 class="text-xl font-medium mb-4 text-gray-700">Reporting & Analytics</h3>
-              <p>Generate reports on attendance, performance, and other metrics easily.</p>
-          </div>
-      </div>
-  </div>
-</section>
 
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
+          >
+            <i class="fas fa-money-check-alt text-4xl text-blue-600 mb-4"></i>
+            <h3 class="text-xl font-medium mb-4 text-gray-700">
+              Fee Management
+            </h3>
+            <p>
+              Keep track of student payments, invoices, and financial records in
+              one place.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
+          >
+            <i
+              class="fas fa-chalkboard-teacher text-4xl text-blue-600 mb-4"
+            ></i>
+            <h3 class="text-xl font-medium mb-4 text-gray-700">
+              Teacher Management
+            </h3>
+            <p>
+              Manage teacher profiles, schedules, and performance evaluations
+              efficiently.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
+          >
+            <i class="fas fa-book-open text-4xl text-green-600 mb-4"></i>
+            <h3 class="text-xl font-medium mb-4 text-gray-700">
+              Course Management
+            </h3>
+            <p>
+              Efficiently manage courses, update curriculum, and track student
+              progress.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
+          >
+            <i class="fas fa-bullhorn text-4xl text-red-600 mb-4"></i>
+            <h3 class="text-xl font-medium mb-4 text-gray-700">
+              Notifications & Alerts
+            </h3>
+            <p>
+              Instantly notify students and teachers about important updates,
+              assignments, and events.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- About Us Section -->
     <section class="py-16 bg-white">
-        <div class="container px-3 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <!-- Left Side: Content -->
-            <div class="text-center md:text-left">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">About Edu Hub</h2>
-                <p class="text-lg text-gray-600 mb-4">
-                    Edu Hub is a state-of-the-art platform designed to simplify the management of educational institutions.
-                    From managing student data to tracking financial records and scheduling classes, Edu Hub provides a
-                    seamless, all-in-one solution to help academies focus on what matters most—education.
-                </p>
-                <p class="text-lg text-gray-600 mb-4">
-                    With our user-friendly interface and powerful features, Edu Hub empowers educators and administrators
-                    to enhance operational efficiency and improve student outcomes. We believe in the transformative power
-                    of education and are committed to supporting institutions in achieving their goals.
-                </p>
-                <p class="text-lg text-gray-600">
-                    Join us at Edu Hub, where we transform the future of education management, making it simpler,
-                    smarter, and more effective for everyone involved.
-                </p>
-            </div>
-            <!-- Right Side: Image -->
-            <div class="flex justify-center">
-                <img src="https://workdo.io/wp-content/themes/storefront-child/assets/images/laravel-products/lmsgo/lmsgo-video-banner.png" alt="Edu Hub Platform"
-                    class="w-full h-auto max-w-lg">
-            </div>
+      <div
+        class="container px-3 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+      >
+        <!-- Left Side: Content -->
+        <div class="text-center md:text-left">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">About Edu Hub</h2>
+          <p class="text-lg text-gray-600 mb-4">
+            Edu Hub is a state-of-the-art platform designed to simplify the
+            management of educational institutions. From managing student data
+            to tracking financial records and scheduling classes, Edu Hub
+            provides a seamless, all-in-one solution to help academies focus on
+            what matters most—education.
+          </p>
+          <p class="text-lg text-gray-600 mb-4">
+            With our user-friendly interface and powerful features, Edu Hub
+            empowers educators and administrators to enhance operational
+            efficiency and improve student outcomes. We believe in the
+            transformative power of education and are committed to supporting
+            institutions in achieving their goals.
+          </p>
+          <p class="text-lg text-gray-600">
+            Join us at Edu Hub, where we transform the future of education
+            management, making it simpler, smarter, and more effective for
+            everyone involved.
+          </p>
         </div>
+        <!-- Right Side: Image -->
+        <div class="flex justify-center">
+          <img
+            src="https://workdo.io/wp-content/themes/storefront-child/assets/images/laravel-products/lmsgo/lmsgo-video-banner.png"
+            alt="Edu Hub Platform"
+            class="w-full h-auto max-w-lg"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Call to Action -->
     <section class="bg-white py-16">
-        <div class="container px-3 mx-auto text-center">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Ready to Transform Your Academy?</h2>
-            <p class="text-gray-600 mb-8">Join Edu Hub today and streamline your entire academy management process!</p>
-            <div class="space-x-4">
-                <a href="./registration.html" class="bg-blue-800 text-white px-6 py-3 rounded-lg hover:bg-blue-900">Sign Up Now</a>
-                <button class="border border-blue-800 text-blue-800 px-6 py-3 rounded-lg hover:bg-blue-900 hover:text-white">Contact Us</button>
-            </div>
+      <div class="container px-3 mx-auto text-center">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          Ready to Transform Your Academy?
+        </h2>
+        <p class="text-gray-600 mb-8">
+          Join Edu Hub today and streamline your entire academy management
+          process!
+        </p>
+        <div class="space-x-4">
+          <a
+            href="./registration.html"
+            class="bg-blue-800 text-white px-6 py-3 rounded-lg hover:bg-blue-900"
+            >Sign Up Now</a
+          >
+          <button
+            class="border border-blue-800 text-blue-800 px-6 py-3 rounded-lg hover:bg-blue-900 hover:text-white"
+          >
+            Contact Us
+          </button>
         </div>
+      </div>
     </section>
 
-<!-- Subscription Plans Section -->
-<section class="py-12 pb-16 bg-gray-100">
-  <div class="container px-3 mx-auto text-center">
-      <h2 class="text-3xl font-semibold text-gray-800 mb-8">Subscription Plans</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Basic Plan -->
-          <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
-              <h3 class="text-xl font-medium mb-4 text-gray-700">Basic Plan</h3>
-              <p class="text-4xl font-bold text-blue-800 mb-4">$19/month</p>
-              <ul class="text-left space-y-2 mb-4">
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Student Management</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Class Scheduling</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Fee Management</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Email Notifications</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Mobile App Access</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> 24/7 Customer Support</li>
-              </ul>
-              <button class="bg-blue-800 text-white px-4 py-2 rounded-lg hover:bg-blue-900 transition duration-300">Choose Plan</button>
+    <!-- Subscription Plans Section -->
+    <!-- Subscription Plans Section -->
+    <section class="py-16 bg-gradient-to-b from-gray-50 to-gray-100">
+      <div class="max-w-4xl px-6 mx-auto text-center">
+        <h2 class="text-4xl font-semibold text-gray-800 mb-4">
+          Subscription Plans
+        </h2>
+        <p class="text-gray-600 mb-8">
+          Choose the perfect plan for your needs. Upgrade anytime for more
+          features and priority support.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <!-- Free Plan -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-xl duration-300"
+          >
+            <h3 class="text-2xl font-medium mb-4 text-gray-700">Free Plan</h3>
+            <p class="text-5xl font-bold text-blue-800 mb-4">
+              $0<span class="text-lg font-normal">/month</span>
+            </p>
+            <ul class="text-left space-y-3 mb-6">
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> Student Management
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> Teacher Management
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> Course Organization
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> Student & Teacher
+                Profiles
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> Basic Support
+              </li>
+            </ul>
+
+            <button
+              class="w-full flex items-center justify-center bg-blue-800 text-white px-4 py-3 rounded-lg hover:bg-blue-900 transition duration-300"
+            >
+              <span class="mr-2">🚀</span> Choose Plan
+            </button>
           </div>
-          <!-- Premium Plan -->
-          <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
-              <h3 class="text-xl font-medium mb-4 text-gray-700">Premium Plan</h3>
-              <p class="text-4xl font-bold text-blue-800 mb-4">$49/month</p>
-              <ul class="text-left space-y-2 mb-4">
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> All Basic Features</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Teacher Management</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Performance Analytics</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Reporting & Analytics</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Attendance Tracking</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Customizable Dashboards</li>
-              </ul>
-              <button class="bg-blue-800 text-white px-4 py-2 rounded-lg hover:bg-blue-900 transition duration-300">Choose Plan</button>
+
+          <!-- Professional Plan -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-xl duration-300"
+          >
+            <h3 class="text-2xl font-medium mb-4 text-gray-700">
+              Professional Plan
+            </h3>
+            <p class="text-5xl font-bold text-blue-800 mb-4">
+              $25<span class="text-lg font-normal">/month</span>
+            </p>
+            <ul class="text-left space-y-3 mb-6">
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> All Free Plan
+                Features
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> Batch Organization
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> Fee Management
+                System
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> Attendance Tracking
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> 24/7 Priority
+                Support
+              </li>
+            </ul>
+            <button
+              class="w-full flex items-center justify-center bg-blue-800 text-white px-4 py-3 rounded-lg hover:bg-blue-900 transition duration-300"
+            >
+              <span class="mr-2">🔥</span> Choose Plan
+            </button>
           </div>
-          <!-- Enterprise Plan -->
-          <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
-              <h3 class="text-xl font-medium mb-4 text-gray-700">Enterprise Plan</h3>
-              <p class="text-4xl font-bold text-blue-800 mb-4">$99/month</p>
-              <ul class="text-left space-y-2 mb-4">
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> All Premium Features</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Custom Integrations</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Priority Support</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Advanced Analytics</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Dedicated Account Manager</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Multi-User Access</li>
-              </ul>
-              <button class="bg-blue-800 text-white px-4 py-2 rounded-lg hover:bg-blue-900 transition duration-300">Choose Plan</button>
-          </div>
+        </div>
       </div>
-  </div>
-</section>
-
-
+    </section>
 
     <footer class="bg-gray-800 text-white py-10">
-        <div class="container px-3 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-                <h4 class="text-xl font-bold mb-4">Edu Hub</h4>
-                <p class="text-gray-400">Empowering educational institutions with digital solutions.</p>
-            </div>
-            <div>
-                <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-blue-400">Home</a></li>
-                    <li><a href="#" class="hover:text-blue-400">Features</a></li>
-                    <li><a href="#" class="hover:text-blue-400">Services</a></li>
-                    <li><a href="#" class="hover:text-blue-400">About</a></li>
-                    <li><a href="#" class="hover:text-blue-400">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xl font-bold mb-4">Contact Us</h4>
-                <p class="text-gray-400">Email: contact@eduhub.com</p>
-                <p class="text-gray-400">Phone: +123 456 7890</p>
-            </div>
+      <div class="container px-3 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h4 class="text-xl font-bold mb-4">Edu Hub</h4>
+          <p class="text-gray-400">
+            Empowering educational institutions with digital solutions.
+          </p>
         </div>
-        <div class="text-center mt-6">
-            <p class="text-gray-400">© 2024 Edu Hub. All rights reserved.</p>
+        <div>
+          <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-400">Home</a></li>
+            <li><a href="#" class="hover:text-blue-400">Features</a></li>
+            <li><a href="#" class="hover:text-blue-400">Services</a></li>
+            <li><a href="#" class="hover:text-blue-400">About</a></li>
+            <li><a href="#" class="hover:text-blue-400">Contact</a></li>
+          </ul>
         </div>
+        <div>
+          <h4 class="text-xl font-bold mb-4">Contact Us</h4>
+          <p class="text-gray-400">Email: contact@eduhub.com</p>
+          <p class="text-gray-400">Phone: +123 456 7890</p>
+        </div>
+      </div>
+      <div class="text-center mt-6">
+        <p class="text-gray-400">© 2024 Edu Hub. All rights reserved.</p>
+      </div>
     </footer>
 
     <script>
-        const menuButton = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+      const menuButton = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
     </script>
-</body>
-
+  </body>
 </html>
